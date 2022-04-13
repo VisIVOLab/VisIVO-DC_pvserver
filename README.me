@@ -1,0 +1,4 @@
+docker build -t visivo-dc_pvserver .
+
+docker run --gpus all -p 11111:11111 \
+    visivo-dc_pvserver /opt/ParaView-5.10.0/bin/pvserver
