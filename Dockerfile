@@ -11,3 +11,8 @@ RUN wget "https://www.paraview.org/paraview-downloads/download.php?submit=Downlo
     tar xzf ParaView-5.10.0-egl-MPI-Linux-Python3.9-x86_64.tar.gz && \
     mv ParaView-5.10.0-egl-MPI-Linux-Python3.9-x86_64 /opt/ParaView-5.10.0 &&\
     rm -rf ParaView-5.10.0-egl-MPI-Linux-Python3.9-x86_64.tar.gz
+
+
+RUN yum -y install libgomp && \
+    yum clean all && \
+    rm -rf /var/cache/yum
