@@ -1,6 +1,6 @@
 FROM nvidia/cuda:11.6.2-base-centos7
 
-RUN yum install wget  && \
+RUN yum -y install wget  && \
     yum clean all && \
     rm -rf /var/cache/yum
 
