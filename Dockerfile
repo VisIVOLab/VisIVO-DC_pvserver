@@ -13,6 +13,15 @@ RUN wget --no-check-certificate "https://www.paraview.org/paraview-downloads/dow
     mv ParaView-5.10.0-egl-MPI-Linux-Python3.9-x86_64 /opt/ParaView-5.10.0 &&\
     rm -rf ParaView-5.10.0-egl-MPI-Linux-Python3.9-x86_64.tar.gz
 
+
+RUN wget --no-check-certificate "http://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/cfitsio-4.1.0.tar.gz" && \
+    tar xfz cfitsio-4.1.0.tar.gz && \ 
+    cd cfitsio-4.1.0 && \
+    ./configure --prefix=/opt/cfitsio/ --enable-reentrant && \
+    make && \
+    make install 
+
+
 COPY Files/FitsReader.tar.gz /tmp/
 
 RUN tar xzf FitsReader.tar.gz  && \
