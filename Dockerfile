@@ -28,7 +28,7 @@ COPY Files/FitsReader.tar.gz /tmp/
 
 RUN tar xzf FitsReader.tar.gz  && \
     cp -r FitsReader /opt/ParaView-5.10.1/lib/paraview-5.10/plugins/  && \
-    sed -i '3i\\t<Plugin name=\"FitsReader\" auto_load=\"1\"\>' /opt/ParaView-5.10.1/lib/paraview-5.10/plugins/paraview.plugins.xml  && \
+    sed -i '3i\\t<Plugin name=\"FitsReader\" auto_load=\"1\"\\>' /opt/ParaView-5.10.1/lib/paraview-5.10/plugins/paraview.plugins.xml  && \
     rm -rf /tmp/*
 
       
