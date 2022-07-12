@@ -22,7 +22,7 @@ RUN wget --no-check-certificate "http://heasarc.gsfc.nasa.gov/FTP/software/fitsi
     echo "/opt/cfitsio/lib" >> /etc/ld.so.conf.d/cfitsio.conf && \
     ldconfig
 
-ENV LD_LIBRARY_PATH /opt/cfitsio-4.1.0/lib:$LD_LIBRARY_PATH
+ENV LD_LIBRARY_PATH /opt/cfitsio/lib:$LD_LIBRARY_PATH
 
 COPY Files/FitsReader.tar.gz /tmp/
 
