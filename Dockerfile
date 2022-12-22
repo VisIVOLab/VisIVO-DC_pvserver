@@ -1,4 +1,4 @@
-FROM nvidia/cudagl:11.3.1-base-centos7
+FROM nvidia/cudagl:11.4.2-base-centos7
 
 
 RUN yum -y install wget libgomp gcc-c++ zlib-devel make && \
