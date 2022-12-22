@@ -8,7 +8,7 @@ RUN yum -y install wget libgomp gcc-c++ zlib-devel make && \
 WORKDIR /tmp
 
 RUN wget --no-check-certificate "https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.11&type=binary&os=Linux&downloadFile=ParaView-5.11.0-RC2-egl-MPI-Linux-Python3.9-x86_64.tar.gz" && \
-    mv "downloadFile=ParaView-5.11.0-RC2-egl-MPI-Linux-Python3.9-x86_64.tar.gz" ParaView-5.11.0-RC2-egl-MPI-Linux-Python3.9-x86_64.tar.gz && \
+    mv "download.php?submit=Download&version=v5.11&type=binary&os=Linux&downloadFile=ParaView-5.11.0-RC2-egl-MPI-Linux-Python3.9-x86_64.tar.gz" ParaView-5.11.0-RC2-egl-MPI-Linux-Python3.9-x86_64.tar.gz && \
     tar xzf ParaView-5.11.0-RC2-egl-MPI-Linux-Python3.9-x86_64.tar.gz && \
     mv ParaView-5.11.0-RC2-egl-MPI-Linux-Python3.9-x86_64.tar.gz /opt/ParaView-5.11.0 &&\
     rm -rf ParaView-5.11.0-RC2-egl-MPI-Linux-Python3.9-x86_64.tar.gz
