@@ -1,6 +1,9 @@
 docker build -t visivo-pvserver .
 
 docker run --gpus all -p 11111:11111 \
-    visivo-pvserver /opt//opt/ParaView-5.11.0/bin/pvserver
+    visivo-pvserver /opt/ParaView-5.11.0/bin/pvserver
 
 #https://catalog.ngc.nvidia.com/orgs/nvidia-hpcvis/containers/paraview
+
+To run with singularity:
+singularity exec --nv --bind <host_dir>:<container_dir> visivo-pvserver.sif /opt/ParaView-5.11.0/bin/pvserver
