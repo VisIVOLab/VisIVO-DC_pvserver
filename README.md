@@ -9,6 +9,8 @@ To include any local data files on the docker server, they must be mounted using
 docker run --gpus all -p 11111:11111 -v fold1:/Mount/Data/fold1 -v fold2:/Mount/Data/fold2 -v fold3:/Mount/Data/fold3 visivolab/visivo-pvserver:egl
 ```
 
+Note that no files will be available on the server unless they are included in a path explicitly included through the `-v` switch.
+
 To run with singularity:
 ```
 singularity exec --nv --bind <host_dir>:<container_dir> visivo-pvserver.sif /opt/ParaView-5.11.2/bin/pvserver
